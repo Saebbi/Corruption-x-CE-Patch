@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="OrkBoy"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>500</min>
+            <max>900</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>Ork_Ranged</li>
+          </weaponTags>
+          <magazineCount>
+            <min>4</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.5</generateChance>
+            <sidearmMoney>
+              <min>500</min>
+              <max>900</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>Ork_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="OrkNob"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>500</min>
+            <max>900</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>Ork_Ranged</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.5</generateChance>
+            <sidearmMoney>
+              <min>500</min>
+              <max>900</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>Ork_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="OrkGretchin"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>60</min>
+            <max>420</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>NeolithicMeleeBasic</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

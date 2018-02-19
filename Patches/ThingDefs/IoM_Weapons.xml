@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>34</power>
+					<cooldownTime>1.7</cooldownTime>
+					<armorPenetration>1</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>32</power>
+					<cooldownTime>1.7</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.8</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]/statBases</xpath>
+		<value>
+    		<Bulk>10</Bulk>
+    		<MeleeCounterParryBonus>1.5</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.8</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+				<MeleeDodgeChance>0.5</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_RelicBlade"]/weaponTags</xpath>
+		<value>
+      <li>IoM_HolyItems</li>
+		</value>
+	</Operation>
+ 
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.6</cooldownTime>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.6</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.5</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.4</MeleeCritChance>
+				<MeleeParryChance>0.15</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedKnife"]/weaponTags</xpath>
+		<value>
+      <li>IoM_CorruptedItems</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Knife ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>20</power>
+					<cooldownTime>1.1</cooldownTime>
+					<armorPenetration>0.4</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>23</power>
+					<cooldownTime>1.1</cooldownTime>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.4</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedGladius"]/weaponTags</xpath>
+		<value>
+			<li>IoM_CorruptedItems</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Club ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.5</cooldownTime>
+					<armorPenetration>0.85</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.5</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]/statBases</xpath>
+		<value>
+      		<Bulk>4</Bulk>
+      		<MeleeCounterParryBonus>1.125</MeleeCounterParryBonus>
+			<MeleeWeapon_CooldownMultiplier>2.5</MeleeWeapon_CooldownMultiplier>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_CorruptedLongsword"]/weaponTags</xpath>
+		<value>
+			<li>IoM_CorruptedItems</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Mace ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>26</power>
+					<cooldownTime>1.4</cooldownTime>
+					<armorPenetration>0.85</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.4</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]/statBases</xpath>
+		<value>
+    		<Bulk>3.5</Bulk>
+    		<MeleeCounterParryBonus>1.25</MeleeCounterParryBonus>
+			<MeleeWeapon_CooldownMultiplier>2.5</MeleeWeapon_CooldownMultiplier>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.8</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_HolyLongsword"]/weaponTags</xpath>
+		<value>
+      <li>IoM_CorruptedItems</li>
+		</value>
+	</Operation>
+ 
+</Patch>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Pistol_StubMounted</defName>
+    <statBases>
+      <Mass>1.50</Mass>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>1.50</Bulk>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Plasteel>30</Plasteel>
+      <Component>6</Component>
+	</costList>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>24</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>6</magazineSize>
+      <reloadTime>3.75</reloadTime>
+      <ammoSet>AmmoSet_44Magnum</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>IG_MecSupport</li>
+    </weaponTags>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Mech_Arquebus</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.10</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.5</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>92000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <Plasteel>30</Plasteel>
+      <Component>6</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.30</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_50BMG_FMJ</defaultProjectile>
+      <warmupTime>3</warmupTime>
+      <range>50</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>5</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_50BMG</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>IG_MecRanged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Mech_ArcRifle</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.5</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>120000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Component>6</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.20</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Arc</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>24</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>20</magazineSize>
+      <reloadTime>2</reloadTime>
+      <ammoSet>AmmoSet_Arc</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>1</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>IG_MecRanged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Mech_ArcPistol</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>92000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>25</Plasteel>
+      <Component>3</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.10</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Arc</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>24</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>8</magazineSize>
+      <reloadTime>1.5</reloadTime>
+      <ammoSet>AmmoSet_Arc</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>1</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>IG_MecRanged</li>
+    </weaponTags>
+  </Operation>
+  
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>OmnisianAxe</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>1140000</WorkToMake>
+    </statBases>
+	<costList>
+      <Steel>30</Steel>
+      <Component>2</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.10</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_LascannonRound</defaultProjectile>
+      <warmupTime>2.5</warmupTime>
+      <range>20</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+      <reloadTime>1.5</reloadTime>
+      <ammoSet>AmmoSet_LascannonRound</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>1</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>IG_MecPriest</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="OmnisianAxe"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>40</power>
+				<cooldownTime>1.8</cooldownTime>
+				<armorPenetration>0.9</armorPenetration>
+				<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+			</li>
+		</tools>
+	</value>	
+   </Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="OmnisianAxe"]/statBases</xpath>
+		<value>
+    		<Bulk>10</Bulk>
+    		<MeleeCounterParryBonus>1.5</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="OmnisianAxe"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.8</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="SkitariusMaul"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>maul</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>28</power>
+					<cooldownTime>1.8</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusMaul"]/statBases</xpath>
+		<value>
+      <Bulk>3.5</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusMaul"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="SkitariusMaul"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="SkitariusMaul"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusMaul"]/weaponTags</xpath>
+		<value>
+      <li>IG_MecMelee</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Ikwa ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="SkitariusBlade"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.4</cooldownTime>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>1.5</cooldownTime>
+					<armorPenetration>0.4</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusBlade"]/statBases</xpath>
+		<value>
+    		<Bulk>4</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusBlade"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.625</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="SkitariusBlade"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="SkitariusBlade"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="SkitariusBlade"]/weaponTags</xpath>
+		<value>
+			<li>IG_MecMelee</li>
+		</value>
+	</Operation>
+	
+</Patch>

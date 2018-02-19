@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  
+   <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="SororitasNurse"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>1000</min>
+            <max>3000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>Sororitas_Support</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="SororitasBattleSister"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>1200</min>
+            <max>3000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Vet</li>
+          </weaponTags>
+          <magazineCount>
+            <min>4</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>1</generateChance>
+            <sidearmMoney>
+              <min>1000</min>
+              <max>3000</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>Sororitas_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="SorotiasSergeant"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>Sororitas_Melee</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="SorotiasSuperior"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>Sororitas_Melee</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

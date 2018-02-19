@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoPlasma</defName>
+      <label>Plasma ammo</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Plasma</defName>
+    <label>Laser ammo</label>
+    <ammoTypes>
+      <Ammo_Plasma>Bullet_Plasma</Ammo_Plasma>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="PlasmaBase" ParentName="AmmoBase" Abstract="True">
+    <description>Plasma ammo</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoPlasma</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="PlasmaBase">
+    <defName>Ammo_Plasma</defName>
+    <label>Plasma cartridge</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <ammoClass>Charged</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BasePlasma" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/IG/Weapons/Projectiles/PlasmaRound</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Laser</damageDef>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BasePlasma">
+    <defName>Bullet_Plasma</defName>
+    <label>Plasma</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+      <armorPenetration>0.95</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

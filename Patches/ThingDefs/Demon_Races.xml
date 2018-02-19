@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Undivided"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Undivided"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>FronRightClaws</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Undivided"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Undivided"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Undivided"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Bloodletter"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Bloodletter"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Bloodletter"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Bloodletter"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Bloodletter"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Daemonette"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Daemonette"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Daemonette"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Daemonette"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Daemonette"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Plaguebearer"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Plaguebearer"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Plaguebearer"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Plaguebearer"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Plaguebearer"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BaseDemon"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Horror"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Horror"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Slash</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.15</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Horror"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Horror"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Demon_Horror"]/comps</xpath>
+		<value>
+			<li>
+			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" />
+		</value>
+	</Operation>
+	
+</Patch>
+

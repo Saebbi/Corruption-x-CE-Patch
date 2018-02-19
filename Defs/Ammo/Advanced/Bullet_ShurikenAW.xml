@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoShurikenAW</defName>
+      <label>Eldar ShurikenAW</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_ShurikenAW</defName>
+    <label>Eldar ShurikenAW</label>
+    <ammoTypes>
+      <Ammo_ShurikenAW>Bullet_ShurikenAW</Ammo_ShurikenAW>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="ShurikenAWBase" ParentName="AmmoBase" Abstract="True">
+    <description>Shuriken used by standard Eldar designs</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoShuriken</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ShurikenAWBase">
+    <defName>Ammo_ShurikenAW</defName>
+    <label>ShurikenAW cartridge</label>
+    <graphicData>
+      <texPath>Things/Eldar/Shuriken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseShurikenAW" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Eldar/Projectiles/bullet_shuriken</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseShurikenAW">
+    <defName>Bullet_ShurikenAW</defName>
+    <label>ShurikenAW</label>
+    <projectile>
+      <damageAmountBase>3</damageAmountBase>
+      <armorPenetration>0.4</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

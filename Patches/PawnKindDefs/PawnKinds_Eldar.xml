@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  
+   <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="EldarGuardian"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>E_Ranged</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="EldarAutarch"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+			<li>E_Ranged</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="EldarWarlock"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>E_Melee</li>
+          </weaponTags>
+          <magazineCount>
+            <min>4</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="EldarRanger"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>E_Ranger</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="DireAvenger"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>9000</min>
+            <max>9000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>E_DireAvengers</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

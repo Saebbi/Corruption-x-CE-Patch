@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Corruption CE Patch</name>
+	<author>Saebbi</author>
+	<url></url>
+	<targetVersion>0.18.1722</targetVersion>
+	<description>Patches Cpt. Ohus Corruption mod to work with Combat Extended. Textures and Corruption mod were made by Cpt. Ohu.</description>
+</ModMetaData>

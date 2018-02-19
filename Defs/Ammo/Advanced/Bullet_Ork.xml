@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoOrkBullet</defName>
+      <label>Ork Bullet</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_OrkBullet</defName>
+    <label>Ork Bullet</label>
+    <ammoTypes>
+      <Ammo_OrkBullet>Bullet_Ork</Ammo_OrkBullet>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="OrkBulletBase" ParentName="AmmoBase" Abstract="True">
+    <description>Ork Bullet</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoOrkBullet</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrkBulletBase">
+    <defName>Ammo_OrkBullet</defName>
+    <label>Ork Bullet cartridge</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseOrkBullet" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseOrkBullet">
+    <defName>Bullet_Ork</defName>
+    <label>Ork Bullet</label>
+    <projectile>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetration>0.4</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

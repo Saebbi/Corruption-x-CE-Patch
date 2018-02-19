@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  
+   <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_Trooper"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>800</min>
+            <max>1200</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Std</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_AssaultTrooper"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>1200</min>
+            <max>1600</max>
+          </sidearmMoney>
+          <weaponTags>
+			<li>IG_Ranged_Ass</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_Sergeant"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>1900</min>
+            <max>3800</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Vet</li>
+          </weaponTags>
+          <magazineCount>
+            <min>4</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.8</generateChance>
+            <sidearmMoney>
+              <min>800</min>
+              <max>1500</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>IG_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_Ordinate"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>1400</min>
+            <max>1800</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Vet</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.8</generateChance>
+            <sidearmMoney>
+              <min>800</min>
+              <max>1500</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>IG_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_Commissar"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>3200</min>
+            <max>4200</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Vet</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.8</generateChance>
+            <sidearmMoney>
+              <min>1200</min>
+              <max>1800</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>IG_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="IG_Colonel"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>3800</min>
+            <max>5000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>IG_Ranged_Vet</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+        <sidearms>
+          <li>
+            <generateChance>0.8</generateChance>
+            <sidearmMoney>
+              <min>1800</min>
+              <max>3000</max>
+            </sidearmMoney>
+            <weaponTags>
+              <li>IG_Melee</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

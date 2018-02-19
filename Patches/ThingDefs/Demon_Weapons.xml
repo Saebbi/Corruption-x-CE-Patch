@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Tzeentch_Staff</defName>
+    <statBases>
+      <Mass>1.50</Mass>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>1.50</Bulk>
+      <WorkToMake>1140000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>2</Component>
+	</costList>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Tzeentch</defaultProjectile>
+      <warmupTime>5</warmupTime>
+      <range>35</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>20</magazineSize>
+      <reloadTime>3.75</reloadTime>
+      <ammoSet>AmmoSet_Tzeentch</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>WeaponsTzeentch</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Hellblade"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>32</power>
+					<cooldownTime>1.6</cooldownTime>
+					<armorPenetration>0.75</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>1.8</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Hellblade"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Hellblade"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Hellblade"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Hellblade"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Hellblade"]/weaponTags</xpath>
+		<value>
+      <li>WeaponsKhorne</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Knife ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Plaguesword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.7</cooldownTime>
+					<armorPenetration>0.5</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>28</power>
+					<cooldownTime>2.0</cooldownTime>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plaguesword"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plaguesword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.3</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Plaguesword"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Plaguesword"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plaguesword"]/weaponTags</xpath>
+		<value>
+			<li>WeaponsNurgle</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Club ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Plague-Scythe"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>1.8</cooldownTime>
+					<armorPenetration>0.7</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>1.7</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.4</armorPenetration>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plague-Scythe"]/statBases</xpath>
+		<value>
+      		<Bulk>4</Bulk>
+      		<MeleeCounterParryBonus>1.125</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plague-Scythe"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Plague-Scythe"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Plague-Scythe"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Plague-Scythe"]/weaponTags</xpath>
+		<value>
+			<li>WeaponsNurgle</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Mace ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Daemonette_Claw"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.4</cooldownTime>
+					<armorPenetration>0.55</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.4</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.4</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Daemonette_Claw"]/statBases</xpath>
+		<value>
+    		<Bulk>3.5</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Daemonette_Claw"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.8</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Daemonette_Claw"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Daemonette_Claw"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Daemonette_Claw"]/weaponTags</xpath>
+		<value>
+      <li>WeaponsSlaanesh</li>
+		</value>
+	</Operation> 
+  
+</Patch>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoDarklight</defName>
+      <label>Dark Eldar Splinter</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Darklight</defName>
+    <label>Dark Eldar Darklight</label>
+    <ammoTypes>
+      <Ammo_Darklight>Bullet_Darklight</Ammo_Darklight>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="DarklightBase" ParentName="AmmoBase" Abstract="True">
+    <description>Darklight used by Dark Eldar designs</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoDarklight</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="DarklightBase">
+    <defName>Ammo_Darklight</defName>
+    <label>Darklight cartridge</label>
+    <graphicData>
+      <texPath>Things/DarkEldar/Splinter</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>ExplosiveAP</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseDarklight" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/DarkEldar/Weapons/Bullet_Darklight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseDarklight">
+    <defName>Bullet_Darklight</defName>
+    <label>Splinter</label>
+    <projectile>
+      <damageAmountBase>50</damageAmountBase>
+      <armorPenetration>0.5</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

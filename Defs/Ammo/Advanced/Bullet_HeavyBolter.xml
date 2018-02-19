@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoHeavyBolter</defName>
+      <label>Imperial Heavy Bolter rounds</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_HeavyBolter</defName>
+    <label>Heavy Bolter rounds</label>
+    <ammoTypes>
+      <Ammo_HeavyBolter_Common>Bullet_HeavyBolter_Common</Ammo_HeavyBolter_Common>
+	  <Ammo_HeavyBolter_Hellfire>Bullet_HeavyBolter_Hellfire</Ammo_HeavyBolter_Hellfire>
+      <Ammo_HeavyBolter_Kraken>Bullet_HeavyBolter_Kraken</Ammo_HeavyBolter_Kraken>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="AmmoHeavyBolterBase" ParentName="AmmoBase" Abstract="True">
+    <description>description</description>
+    <statBases>
+	  <Mass>0.02</Mass>
+	  <Bulk>0.01</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoHeavyBolter</li>
+    </thingCategories>
+	<stackLimit>50</stackLimit>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoHeavyBolterBase">
+    <defName>Ammo_HeavyBolter_Common</defName>
+    <label>.75 standard  bolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+  
+  <ThingDef ParentName="AmmoHeavyBolterBase">
+    <defName>Ammo_HeavyBolter_Hellfire</defName>
+    <label>.75 hellfire bolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Hellfire</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>ArmorPiercing</ammoClass>
+  </ThingDef>
+
+  <ThingDef ParentName="AmmoHeavyBolterBase">
+    <defName>Ammo_HeavyBolter_Kraken</defName>
+    <label>.75 kraken bolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Kraken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>Ionized</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="HeavyBolterBase" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="HeavyBolterBase">
+    <defName>Bullet_HeavyBolter_Common</defName>
+    <label>Standard Bolter</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>14</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.8</armorPenetration>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="HeavyBolterBase">
+    <defName>Bullet_HeavyBolter_Hellfire</defName>
+    <label>Hellfire Bolter</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>8</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.9</armorPenetration>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="HeavyBolterBase">
+    <defName>Bullet_HeavyBolter_Kraken</defName>
+    <label>Kraken Bolter</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>EMP</def>
+          <amount>16</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.8</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

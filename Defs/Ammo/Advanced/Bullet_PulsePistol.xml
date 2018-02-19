@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoPulsePistol</defName>
+      <label>Pulse Pistol</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_PulsePistol</defName>
+    <label>Pulse Pistol ammo</label>
+    <ammoTypes>
+      <Ammo_PulsePistol>Bullet_PulsePistol</Ammo_PulsePistol>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="PulsePistolBase" ParentName="AmmoBase" Abstract="True">
+    <description>Pulse Pistol ammo used by standard Tau designs</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoPulsePistol</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="PulsePistolBase">
+    <defName>Ammo_PulsePistol</defName>
+    <label>Pulse Pistol cartridge</label>
+    <graphicData>
+      <texPath>Things/Eldar/Shuriken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BasePulsePistol" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Tau/Weapons/Bullet_Pulse</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BasePulsePistol">
+    <defName>Bullet_PulsePistol</defName>
+    <label>Pulse Pistol</label>
+    <projectile>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetration>0.4</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

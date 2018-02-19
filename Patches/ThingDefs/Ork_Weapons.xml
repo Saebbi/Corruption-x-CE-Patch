@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>OrkShoota</defName>
+    <statBases>
+      <Mass>1.50</Mass>
+      <RangedWeapon_Cooldown>0.96</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.22</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>1.50</Bulk>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>3</Component>
+	</costList>
+    <Properties>
+			<recoilAmount>0.60</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Ork</defaultProjectile>
+      <warmupTime>2.4</warmupTime>
+      <range>20</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>3.75</reloadTime>
+      <ammoSet>AmmoSet_OrkBullet</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>OrkDeffgun</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.3</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>90000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <Component>4</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.70</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Ork</defaultProjectile>
+      <warmupTime>2.5</warmupTime>
+      <range>30</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>8</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>100</magazineSize>
+      <reloadTime>7</reloadTime>
+      <ammoSet>Ammo_OrkBullet</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>8</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>OrkRocketeer</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>120000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>190</Steel>
+      <Component>9</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.60</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_OrkRocket</defaultProjectile>
+      <warmupTime>3</warmupTime>
+      <range>40</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>1</magazineSize>
+      <reloadTime>8</reloadTime>
+      <ammoSet>AmmoSet_OrkRocket</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>1</aimedBurstShotCount>
+    	<aiUseBurstMode>FALSE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>Ork_Heavy</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>OrkBurna</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.96</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <ShotSpread>0.4</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>50000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>3</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.10</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Flamethrower</defaultProjectile>
+      <warmupTime>2.3</warmupTime>
+      <range>10</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>100</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_Flamethrower</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>20</aimedBurstShotCount>
+    	<aiUseBurstMode>FALSE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Ork_Sword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.5</cooldownTime>
+					<armorPenetration>0.45</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.8</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.3</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Sword"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Sword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.4</MeleeCritChance>
+				<MeleeParryChance>0.25</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Ork_Sword"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Ork_Sword"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Sword"]/weaponTags</xpath>
+		<value>
+      <li>Ork_Melee</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Knife ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Ork_Axe"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>40</power>
+					<cooldownTime>3.0</cooldownTime>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Axe"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Axe"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.4</MeleeCritChance>
+				<MeleeParryChance>0.2</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Ork_Axe"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Ork_Axe"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Ork_Axe"]/weaponTags</xpath>
+		<value>
+			<li>Ork_Melee</li>
+		</value>
+	</Operation>
+  
+</Patch>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  
+   <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="Demon_Bloodletter"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>5000</min>
+            <max>5000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>WeaponsKhorne</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="Demon_Plaguebearer"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>5000</min>
+            <max>5000</max>
+          </sidearmMoney>
+          <weaponTags>
+			<li>WeaponsNurgle</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="Demon_Daemonette"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>5000</min>
+            <max>5000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>WeaponsSlaanesh</li>
+          </weaponTags>
+          <magazineCount>
+            <min>4</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/PawnKindDef[defName="Demon_Horror"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>5000</min>
+            <max>5000</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>WeaponsTzeentch</li>
+          </weaponTags>
+          <magazineCount>
+            <min>3</min>
+            <max>5</max>
+          </magazineCount>
+        </forcedSidearm>
+      </li>
+    </value>
+  </Operation>
+  
+</Patch>

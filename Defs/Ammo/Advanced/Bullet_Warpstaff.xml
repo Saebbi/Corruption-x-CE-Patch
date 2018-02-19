@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoWarpstaff</defName>
+      <label>Warpstaff</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>Warpstaff</defName>
+    <label>Warpstaff ammo</label>
+    <ammoTypes>
+      <Ammo_Warpstaff>Bullet_Warpstaff</Ammo_Warpstaff>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="WarpstaffBase" ParentName="AmmoBase" Abstract="True">
+    <description>Warpstaff Bullet</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoWarpstaff</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="WarpstaffBase">
+    <defName>Ammo_Warpstaff</defName>
+    <label>Warpstaff cartridge</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryFuel</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseWarpstaff" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Chaos/Projectiles/Bullet_Warpfire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+	  <explosionRadius>2.4</explosionRadius>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWarpstaff">
+    <defName>Bullet_Warpstaff</defName>
+    <label>Warpstaff Bullet</label>
+    <projectile>
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetration>0.5</armorPenetration>
+	   <secondaryDamage>
+        <li>
+          <def>Flame_Secondary</def>
+          <amount>10</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

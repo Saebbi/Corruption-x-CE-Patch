@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoExitusPistolRound</defName>
+      <label>Exitus Pistol ammo</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_ExitusPistolRound</defName>
+    <label>Exitus Pistol ammo</label>
+    <ammoTypes>
+      <Ammo_ExitusPistolRound>Bullet_ExitusPistolRound</Ammo_ExitusPistolRound>
+	  <Ammo_ExitusPistolRound_EMP>Bullet_ExitusPistolRound_EMP</Ammo_ExitusPistolRound_EMP>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="ExitusPistolRoundBase" ParentName="AmmoBase" Abstract="True">
+    <description>Exitus Pistol ammo</description>
+    <statBases>
+	  <Mass>0.02</Mass>
+	  <Bulk>0.03</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoExitusPistolRound</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ExitusPistolRoundBase">
+    <defName>Ammo_ExitusPistolRound</defName>
+    <label>Exitus Pistol FMJ</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+  
+  <ThingDef ParentName="ExitusPistolRoundBase">
+    <defName>Ammo_ExitusPistolRound_EMP</defName>
+    <label>Exitus Pistol EMP</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Kraken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ammoClass>Ionized</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseExitusPistolRound" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseExitusPistolRound">
+    <defName>Bullet_ExitusPistolRound</defName>
+    <label>Exitus P FMJ</label>
+    <projectile>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetration>0.7</armorPenetration>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BolterBulletBase">
+    <defName>Bullet_ExitusPistolRound_EMP</defName>
+    <label>Exitus P EMP</label>
+    <projectile>
+      <damageAmountBase>27</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>EMP</def>
+          <amount>16</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.7</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

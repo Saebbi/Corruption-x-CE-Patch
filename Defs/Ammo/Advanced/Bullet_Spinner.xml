@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoSpinner</defName>
+      <label>Eldar Spinner</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Spinner</defName>
+    <label>Eldar Spinner</label>
+    <ammoTypes>
+      <Ammo_Spinner>Bullet_Spinner</Ammo_Spinner>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="SpinnerBase" ParentName="AmmoBase" Abstract="True">
+    <description>Spinner used by standard Eldar designs</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoSpinner</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="SpinnerBase">
+    <defName>Ammo_Spinner</defName>
+    <label>Spinner cartridge</label>
+    <graphicData>
+      <texPath>Things/Eldar/Shuriken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>Charged</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseSpinner" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>FactionColors.Graphic_SingleFC</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Laser</damageDef>
+      <speed>125</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseSpinner">
+    <defName>Bullet_Spinner</defName>
+    <label>Spinner</label>
+    <projectile>
+      <damageAmountBase>2</damageAmountBase>
+      <armorPenetration>0.35</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

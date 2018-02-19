@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoArc</defName>
+      <label>Arc</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Arc</defName>
+    <label>Arc ammo</label>
+    <ammoTypes>
+      <Ammo_Arc>Bullet_Arc</Ammo_Arc>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="ArcBase" ParentName="AmmoBase" Abstract="True">
+    <description>Arc ammo</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoArc</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ArcBase">
+    <defName>Ammo_Arc</defName>
+    <label>Arc cartridge</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>RadiationIonising</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseArc" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Mechanicus/Skitarius/Bullet_Arc</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Electrical</damageDef>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseArc">
+    <defName>Bullet_Arc</defName>
+    <label>Arc Bullet</label>
+    <projectile>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetration>0.4</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

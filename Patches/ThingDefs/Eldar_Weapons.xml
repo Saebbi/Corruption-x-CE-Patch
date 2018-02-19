@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_ShurikenPistol</defName>
+    <statBases>
+      <Mass>1.50</Mass>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <SightsEfficiency>0.9</SightsEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>1.50</Bulk>
+      <WorkToMake>132000</WorkToMake>
+    </statBases>
+    <costList>
+      <Wraithbone>30</Wraithbone>
+      <Component>2</Component>
+	</costList>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Shuriken</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>15</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>24</magazineSize>
+      <reloadTime>3.75</reloadTime>
+      <ammoSet>AmmoSet_Shuriken</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>E_Ranged</li>
+    </weaponTags>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_ShurikenRifle</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.10</SightsEfficiency>
+      <ShotSpread>0.13</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>920000</WorkToMake>
+    </statBases>
+    <costList>
+      <Wraithbone>100</Wraithbone>
+      <Component>4</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Shuriken</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <range>20</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>12</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>35</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_Shuriken</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>10</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>E_Ranged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_SniperRifle</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.10</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>120000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Component>6</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Projectile_EldarLongrifle</defaultProjectile>
+      <warmupTime>4.5</warmupTime>
+      <range>45</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>5</magazineSize>
+      <reloadTime>5</reloadTime>
+      <ammoSet>AmmoSet_ShurikenLong</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>1</aimedBurstShotCount>
+    	<aiUseBurstMode>FALSE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>E_Ranger</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_Deathspinner</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>920000</WorkToMake>
+    </statBases>
+    <costList>
+      <Wraithbone>100</Wraithbone>
+      <Component>4</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Spinner</defaultProjectile>
+      <warmupTime>3</warmupTime>
+      <range>10</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <burstShotCount>30</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>35</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_Spinner</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>25</aimedBurstShotCount>
+    	<aiUseBurstMode>FALSE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>E_Warpspider</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_Flamer</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>920000</WorkToMake>
+    </statBases>
+    <costList>
+      <Wraithbone>100</Wraithbone>
+      <Component>4</Component>
+    </costList>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Flamethrower</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <range>8</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>100</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_Flamethrower</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>20</aimedBurstShotCount>
+    	<aiUseBurstMode>TRUE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>EL_ShurikenRifleDA</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.50</Bulk>
+      <WorkToMake>920000</WorkToMake>
+    </statBases>
+    <costList>
+      <Wraithbone>100</Wraithbone>
+      <Component>4</Component>
+    </costList>
+    <Properties>
+		<recoilAmount>0.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_ShurikenAW</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <range>30</range>
+      <soundCast>ShotChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+	  <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>12</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>60</magazineSize>
+      <reloadTime>4.25</reloadTime>
+      <ammoSet>AmmoSet_ShurikenAW</ammoSet>
+    </AmmoUser>
+    <FireModes>
+    	<aimedBurstShotCount>12</aimedBurstShotCount>
+    	<aiUseBurstMode>FALSE</aiUseBurstMode>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>E_DireAvengers</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Eldar_Sword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>23</power>
+					<cooldownTime>1.5</cooldownTime>
+					<armorPenetration>0.55</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>1.7</cooldownTime>
+					<commonality>1.33</commonality>
+					<armorPenetration>0.5</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Sword"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Sword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Add tags -->
+
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Eldar_Sword"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Eldar_Sword"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Sword"]/weaponTags</xpath>
+		<value>
+      <li>E_Melee</li>
+		</value>
+	</Operation>
+
+	<!-- ========== Knife ========== -->
+
+	<!-- Patch stats -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="Eldar_Spear"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>stab</li>
+					</capacities>
+					<power>35</power>
+					<cooldownTime>1.8</cooldownTime>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Spear"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Spear"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.3</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+  	<success>Always</success>
+  	<operations>
+    	<li Class="PatchOperationTest">
+      	<xpath>*/ThingDef[defName="Eldar_Spear"]/weaponTags</xpath>
+      	<success>Invert</success>
+    	</li>
+    	<li Class="PatchOperationAdd">
+      	<xpath>*/ThingDef[defName="Eldar_Spear"]</xpath>
+      	<value>
+        	<weaponTags />
+      	</value>
+    	</li>
+  	</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="Eldar_Spear"]/weaponTags</xpath>
+		<value>
+      <li>E_Melee</li>
+		</value>
+	</Operation>
+  
+</Patch>

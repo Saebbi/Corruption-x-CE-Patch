@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoTzeentch</defName>
+      <label>Tzeentch</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Tzeentch</defName>
+    <label>Lightning Strike Tzeentch</label>
+    <ammoTypes>
+      <Ammo_Tzeentch>Bullet_Tzeentch</Ammo_Tzeentch>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="TzeentchBase" ParentName="AmmoBase" Abstract="True">
+    <description>Lightning Stirke Tzeentch</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoTzeentch</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="TzeentchBase">
+    <defName>Ammo_Tzeentch</defName>
+    <label>Tzeentch cartridge</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryFuel</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseTzeentch" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Chaos/Demons/AoE_Tzeentch</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <speed>15</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseTzeentch">
+    <defName>Bullet_Tzeentch</defName>
+    <label>Lightning Strike</label>
+    <projectile>
+      <damageAmountBase>0</damageAmountBase>
+      <armorPenetration>0.9</armorPenetration>
+	   <secondaryDamage>
+        <li>
+          <def>Flame_Secondary</def>
+          <amount>10</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
+  </ThingDef>
+	
+</Defs>

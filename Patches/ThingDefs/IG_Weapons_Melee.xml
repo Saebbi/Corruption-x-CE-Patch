@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_Chainsword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>1.6</cooldownTime>
+					<armorPenetration>0.6</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_Chainsword"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_Chainsword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+  
+  
+  
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="MeleeWeapon_ImpPowerSword"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stab</label>
+					<capacities>
+						<li>stab</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>1.8</cooldownTime>
+					<armorPenetration>0.75</armorPenetration>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>1.8</cooldownTime>
+					<armorPenetration>0.9</armorPenetration>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_ImpPowerSword"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="MeleeWeapon_ImpPowerSword"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.4</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>  
+  
+</Patch>

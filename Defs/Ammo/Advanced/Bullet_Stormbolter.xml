@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoStormBolt</defName>
+      <label>Stormbolt ammo</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_StormBolt</defName>
+    <label>Storm Bolter ammo</label>
+    <ammoTypes>
+      <Ammo_StormBolt_Common>Bullet_StormBolt_Common</Ammo_StormBolt_Common>
+	  <Ammo_StormBolt_Hellfire>Bullet_StormBolt_Hellfire</Ammo_StormBolt_Hellfire>
+      <Ammo_StormBolt_Kraken>Bullet_StormBolt_Kraken</Ammo_StormBolt_Kraken>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Name="StormBoltBase" ParentName="AmmoBase" Abstract="True">
+    <description>StormBolt</description>
+    <statBases>
+	  <Mass>0.02</Mass>
+	  <Bulk>0.01</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoStormBolt</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="StormBoltBase">
+    <defName>Ammo_StormBolt_Common</defName>
+    <label>.75 Stormbolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Standard</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+  
+  <ThingDef ParentName="StormBoltBase">
+    <defName>Ammo_StormBolt_Hellfire</defName>
+    <label>.75 hellfire Stormbolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Hellfire</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>ArmorPiercing</ammoClass>
+  </ThingDef>
+
+  <ThingDef ParentName="StormBoltBase">
+    <defName>Ammo_StormBolt_Kraken</defName>
+    <label>.75 kraken Stormbolt</label>
+    <graphicData>
+      <texPath>Things/IG/Ammo/Bolt_Kraken</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ammoClass>Ionized</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Name="BaseStormBolt" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseStormBolt">
+    <defName>Bullet_StormBolt_Common</defName>
+    <label>StormBolt</label>
+    <projectile>
+      <damageAmountBase>25</damageAmountBase>
+	  <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>12</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.75</armorPenetration>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseStormBolt">
+    <defName>Bullet_StormBolt_Hellfire</defName>
+    <label>Hellfire Bolter</label>
+    <projectile>
+      <damageAmountBase>25</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>6</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.9</armorPenetration>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseStormBolt">
+    <defName>Bullet_StormBolt_Kraken</defName>
+    <label>Kraken Bolter</label>
+    <projectile>
+      <damageAmountBase>25</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>EMP</def>
+          <amount>10</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetration>0.75</armorPenetration>
+    </projectile>
+  </ThingDef>
+	
+</Defs>
