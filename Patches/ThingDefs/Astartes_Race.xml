@@ -79,4 +79,25 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]</xpath>
+		<value>
+			<statBases>
+				<CarryWeight>800</CarryWeight>
+				<PainShockThreshold>3.00</PainShockThreshold>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]</xpath>
+		<value>
+			<race>
+				<baseHealthScale>2.5</baseHealthScale>
+			</race>
+		</value>
+	</Operation>
+	
 </Patch>
