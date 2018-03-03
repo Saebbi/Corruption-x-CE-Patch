@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+	<Operation Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BasePawn"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>*/ThingDef[@Name="BasePawn"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory" />
+		</value>
+	</Operation>
+	
+	
+	
 	<Operation Class="PatchOperationAddModExtension">
+		<success>Always</success>
 		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
@@ -40,42 +58,29 @@
 	</Operation>
 
 	<Operation Class="PatchOperationSequence">
-  	<success>Always</success>
-  	<operations>
-    	<li Class="PatchOperationTest">
-      	<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]/comps</xpath>
-      	<success>Invert</success>
-    	</li>
-    	<li Class="PatchOperationAdd">
-      	<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]</xpath>
-      	<value>
-        	<comps />
-      	</value>
-    	</li>
-  	</operations>
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]/comps</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
 		<xpath>*/AlienRace.ThingDef_AlienRace[defName="Alien_Astartes"]/comps</xpath>
 		<value>
 			<li>
 			  <compClass>CombatExtended.CompPawnGizmo</compClass>
 			</li>
 			<li Class="CombatExtended.CompProperties_Suppressable" />
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>*/ThingDef[@Name="BasePawn"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
-		<value>
-			<li>CombatExtended.ITab_Inventory</li>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>*/ThingDef[@Name="BasePawn"]/comps</xpath>
-		<value>
-			<li Class="CombatExtended.CompProperties_Inventory" />
 		</value>
 	</Operation>
 
@@ -91,3 +96,4 @@
 	</Operation>
 	
 </Patch>
+

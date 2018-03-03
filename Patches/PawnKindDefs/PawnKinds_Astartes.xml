@@ -10,19 +10,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>1000</min>
-            <max>2500</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Astartes_Melee</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -35,19 +22,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>5000</min>
-            <max>6000</max>
-          </sidearmMoney>
-          <weaponTags>
-			<li>Astartes_Ranged</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -60,19 +34,6 @@
           <min>4</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>5000</min>
-            <max>6000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Astartes_Heavy</li>
-          </weaponTags>
-          <magazineCount>
-            <min>4</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -91,26 +52,13 @@
             <max>8000</max>
           </sidearmMoney>
           <weaponTags>
-            <li>Astartes_Ranged</li>
-			<li>Astartes_Heavy</li>
+            <li>Astartes_Melee</li>
           </weaponTags>
           <magazineCount>
             <min>3</min>
             <max>5</max>
           </magazineCount>
         </forcedSidearm>
-        <sidearms>
-          <li>
-            <generateChance>1</generateChance>
-            <sidearmMoney>
-              <min>1000</min>
-              <max>2500</max>
-            </sidearmMoney>
-            <weaponTags>
-              <li>Astartes_Melee</li>
-            </weaponTags>
-          </li>
-        </sidearms>
       </li>
     </value>
   </Operation>

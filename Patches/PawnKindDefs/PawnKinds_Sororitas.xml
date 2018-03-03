@@ -10,19 +10,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>1000</min>
-            <max>3000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Sororitas_Support</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -41,25 +28,13 @@
             <max>3000</max>
           </sidearmMoney>
           <weaponTags>
-            <li>IG_Ranged_Vet</li>
+            <li>Sororitas_Melee</li>
           </weaponTags>
           <magazineCount>
             <min>4</min>
             <max>5</max>
           </magazineCount>
         </forcedSidearm>
-        <sidearms>
-          <li>
-            <generateChance>1</generateChance>
-            <sidearmMoney>
-              <min>1000</min>
-              <max>3000</max>
-            </sidearmMoney>
-            <weaponTags>
-              <li>Sororitas_Melee</li>
-            </weaponTags>
-          </li>
-        </sidearms>
       </li>
     </value>
   </Operation>
@@ -72,19 +47,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>9000</min>
-            <max>9000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Sororitas_Melee</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -97,19 +59,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>9000</min>
-            <max>9000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Sororitas_Melee</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>

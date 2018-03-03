@@ -24,18 +24,6 @@
             <max>3</max>
           </magazineCount>
         </forcedSidearm>
-        <sidearms>
-          <li>
-            <generateChance>0.5</generateChance>
-            <sidearmMoney>
-              <min>100</min>
-              <max>200</max>
-            </sidearmMoney>
-            <weaponTags>
-              <li>CE_Sidearm</li>
-            </weaponTags>
-          </li>
-        </sidearms>
       </li>
     </value>
   </Operation>
@@ -54,26 +42,13 @@
             <max>800</max>
           </sidearmMoney>
           <weaponTags>
-			<li>IG_Ranged_Std</li>
-			<li>CE_Sidearm</li>
+			<li>CE_Sidearm_Melee</li>
           </weaponTags>
           <magazineCount>
             <min>1</min>
             <max>2</max>
           </magazineCount>
         </forcedSidearm>
-        <sidearms>
-          <li>
-            <generateChance>0.7</generateChance>
-            <sidearmMoney>
-              <min>100</min>
-              <max>250</max>
-            </sidearmMoney>
-            <weaponTags>
-              <li>CE_Sidearm_Melee</li>
-            </weaponTags>
-          </li>
-        </sidearms>
       </li>
     </value>
   </Operation>
@@ -86,19 +61,6 @@
           <min>2</min>
           <max>3</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>3500</min>
-            <max>3500</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>SorcererWeapons</li>
-          </weaponTags>
-          <magazineCount>
-            <min>2</min>
-            <max>3</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -111,19 +73,6 @@
           <min>2</min>
           <max>3</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>3500</min>
-            <max>3500</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>SorcererWeapons</li>
-          </weaponTags>
-          <magazineCount>
-            <min>1</min>
-            <max>2</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -136,19 +85,6 @@
           <min>2</min>
           <max>4</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>2500</min>
-            <max>3600</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>CE_Sidearm_Melee</li>
-          </weaponTags>
-          <magazineCount>
-            <min>2</min>
-            <max>3</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>

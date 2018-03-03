@@ -10,9 +10,9 @@
 					<capacities>
 						<li>Cut</li>
 					</capacities>
-					<power>28</power>
+					<power>24</power>
 					<cooldownTime>1.5</cooldownTime>
-					<armorPenetration>0.6</armorPenetration>
+					<armorPenetration>0.5</armorPenetration>
 					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -75,9 +75,9 @@
 					<capacities>
 						<li>Cut</li>
 					</capacities>
-					<power>28</power>
+					<power>24</power>
 					<cooldownTime>1.6</cooldownTime>
-					<armorPenetration>0.9</armorPenetration>
+					<armorPenetration>0.85</armorPenetration>
 					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -85,7 +85,7 @@
 					<capacities>
 						<li>Stab</li>
 					</capacities>
-					<power>28</power>
+					<power>24</power>
 					<cooldownTime>1.7</cooldownTime>
 					<commonality>1.33</commonality>
 					<armorPenetration>0.7</armorPenetration>

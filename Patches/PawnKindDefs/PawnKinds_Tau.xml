@@ -10,20 +10,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>9000</min>
-            <max>9000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Tau_RangedCommon</li>
-			<li>Tau_RangedUncommon</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -36,19 +22,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>9000</min>
-            <max>9000</max>
-          </sidearmMoney>
-          <weaponTags>
-			<li>Tau_RangedCommon</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -61,19 +34,6 @@
           <min>4</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>9000</min>
-            <max>9000</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Tau_RangedCommon</li>
-          </weaponTags>
-          <magazineCount>
-            <min>4</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -86,19 +46,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>1400</min>
-            <max>2200</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Tau_RangedUncommon</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
@@ -111,19 +58,6 @@
           <min>3</min>
           <max>5</max>
         </primaryMagazineCount>
-        <forcedSidearm>
-          <sidearmMoney>
-            <min>1400</min>
-            <max>2200</max>
-          </sidearmMoney>
-          <weaponTags>
-            <li>Tau_RangedUncommon</li>
-          </weaponTags>
-          <magazineCount>
-            <min>3</min>
-            <max>5</max>
-          </magazineCount>
-        </forcedSidearm>
       </li>
     </value>
   </Operation>
